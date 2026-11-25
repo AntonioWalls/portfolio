@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --color-cream: #F4F3EF;        
+  --color-ink: #141413;          /* Negro carbón para textos y bordes */
+  --color-terminal: #181817;     /* Negro de las consolas */
+  --color-accent: #FFD000;       /* Amarillo vibrante */
+  --color-border-muted: #D5D3CA; /* Gris suave para líneas divisorias */
+}
