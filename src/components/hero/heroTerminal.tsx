@@ -8,7 +8,7 @@ export function HeroTerminal() {
   const [activeTab, setActiveTab] = useState<TerminalTab>("inicio");
 
   return (
-    <div className="bg-terminal text-cream rounded-xl border border-ink/20 shadow-lg overflow-hidden font-mono text-xs sm:text-sm">
+    <div className="bg-terminal text-cream rounded-xl border border-ink/20 shadow-lg overflow-hidden font-mono text-xs sm:text-sm h-full flex flex-col justify-between">
       {/* 1. Barra superior de ventana (3 puntitos + ruta + pestañas) */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-cream/10">
         {/* Izquierda: 3 bolitas + ruta ~/fabian.dev */}
@@ -44,7 +44,7 @@ export function HeroTerminal() {
       </div>
 
       {/* 2. Cuerpo de la consola (cambia según la pestaña activa) */}
-      <div className="p-5 space-y-2 min-h-44">
+      <div className="p-4 space-y-1.5 min-h-36">
         {/* Vista de la pestaña [inicio] */}
         {activeTab === "inicio" && (
           <>
@@ -123,15 +123,29 @@ export function HeroTerminal() {
           </div>
         </div>
 
-        {/* Mini gráfica de barras decorativa (como la de la imagen) */}
-        <div className="hidden sm:flex items-end gap-1 h-10">
-          <span className="w-1 h-3 bg-cream/30 rounded-full" />
-          <span className="w-1 h-6 bg-cream/50 rounded-full" />
-          <span className="w-1 h-4 bg-cream/40 rounded-full" />
-          <span className="w-1 h-9 bg-accent rounded-full" />
-          <span className="w-1 h-5 bg-cream/50 rounded-full" />
-          <span className="w-1 h-7 bg-cream/70 rounded-full" />
-          <span className="w-1 h-3 bg-cream/30 rounded-full" />
+        {/* Mini gráfica de barras + cuadrícula de puntitos 4x4 (como en la referencia) */}
+        <div className="hidden sm:flex items-end gap-4">
+          <div className="flex items-end gap-1 h-9">
+            <span className="w-1 h-3 bg-cream/30 rounded-full" />
+            <span className="w-1 h-6 bg-cream/50 rounded-full" />
+            <span className="w-1 h-4 bg-cream/40 rounded-full" />
+            <span className="w-1 h-9 bg-accent rounded-full" />
+            <span className="w-1 h-5 bg-cream/50 rounded-full" />
+            <span className="w-1 h-7 bg-cream/70 rounded-full" />
+            <span className="w-1 h-3 bg-cream/30 rounded-full" />
+          </div>
+
+          <div
+            className="grid grid-cols-4 gap-1.5 opacity-40"
+            aria-hidden="true"
+          >
+            {Array.from({ length: 16 }).map((_, index) => (
+              <span
+                key={index}
+                className="w-1 h-1 rounded-full bg-cream block"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

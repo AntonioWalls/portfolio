@@ -6,15 +6,15 @@ export function Hero() {
   return (
     // id="inicio" conecta con el href="#inicio" del Navbar
     <section id="inicio" className="py-10 border-b border-ink/20">
-      {/* Celular: 1 columna | Monitor (lg): 12 rebanadas (4 + 5 + 3) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        {/* COLUMNA 1 (Izquierda - 4 rebanadas) */}
-        <div className="lg:col-span-4 flex flex-col gap-5">
+      {/* Celular: 1 columna | Monitor (lg): 12 rebanadas (3 + 4 + 5) */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+        {/* COLUMNA 1 (Izquierda - 3 rebanadas) */}
+        <div className="lg:col-span-3 flex flex-col justify-center gap-4">
           <p className="font-mono text-xs uppercase tracking-widest text-ink/70">
             // PORTAFOLIO PERSONAL
           </p>
 
-          <h1 className="font-display text-4xl sm:text-5xl font-extrabold leading-none tracking-tight">
+          <h1 className="font-display text-4xl xl:text-5xl font-extrabold leading-none tracking-tight">
             DESARROLLO DE SOFTWARE
             <span className="text-accent">.</span>
           </h1>
@@ -50,13 +50,13 @@ export function Hero() {
           </div>
         </div>
 
-        {/* COLUMNA 2 (Centro - 5 rebanadas): espacio reservado para la Terminal */}
-        <div className="lg:col-span-5">
+        {/* COLUMNA 2 (Centro - 4 rebanadas): Terminal compacta */}
+        <div className="lg:col-span-4">
           <HeroTerminal />
         </div>
 
-        {/* COLUMNA 3 (Derecha - 3 rebanadas): espacio reservado para el Collage */}
-        <div className="lg:col-span-3">
+        {/* COLUMNA 3 (Derecha - 5 rebanadas): Collage visual */}
+        <div className="lg:col-span-5">
           <HeroVisual />
         </div>
       </div>

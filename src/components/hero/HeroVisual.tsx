@@ -1,42 +1,39 @@
 export function HeroVisual() {
   return (
-    // Mini-grid de 2 sub-columnas que ocupa el 100% de la altura de la terminal (h-full)
-    <div className="grid grid-cols-2 gap-3 h-full min-h-72">
-      {/* SUB-COLUMNA IZQUIERDA: Puntitos + Sol amarillo grande + Edificio brutalista */}
-      <div className="relative rounded-xl overflow-hidden bg-cream flex flex-col justify-between">
-        {/* Parte superior: Cuadrícula de puntitos (izquierda) + Sol amarillo gigante (derecha) */}
-        <div className="relative h-28 w-full">
-          {/* Cuadrícula de puntos 6x5 (mismo truco que hicimos en el Navbar) */}
-          <div
-            className="grid grid-cols-6 gap-2.5 p-2 w-fit opacity-50"
-            aria-hidden="true"
-          >
-            {Array.from({ length: 30 }).map((_, index) => (
-              <span key={index} className="w-1 h-1 rounded-full bg-ink block" />
-            ))}
-          </div>
-
-          {/* Sol amarillo grande asomándose detrás del edificio */}
-          <div
-            className="absolute top-1 right-1 w-28 h-28 rounded-full bg-accent z-0"
-            aria-hidden="true"
-          />
+    // Partimos el collage en 12: 7 rebanadas (edificio + sol) y 5 (hardware + montañas)
+    <div className="grid grid-cols-12 gap-3 h-full min-h-80">
+      {/* SUB-COLUMNA IZQUIERDA (7 rebanadas): Puntitos + Sol amarillo + Edificio recortado en diagonal */}
+      <div className="col-span-7 relative overflow-hidden">
+        {/* Cuadrícula de puntitos arriba a la izquierda */}
+        <div
+          className="absolute top-1 left-0 grid grid-cols-7 gap-2 opacity-60 z-0"
+          aria-hidden="true"
+        >
+          {Array.from({ length: 28 }).map((_, index) => (
+            <span key={index} className="w-1 h-1 rounded-full bg-ink block" />
+          ))}
         </div>
 
-        {/* Foto del edificio brutalista (sube un poquito con -mt-12 para encimarse al sol) */}
-        <div className="relative z-10 flex-1 -mt-12 rounded-xl overflow-hidden border border-ink/20 bg-ink">
+        {/* Sol amarillo grande arriba a la derecha */}
+        <div
+          className="absolute top-0 right-1 w-32 h-32 rounded-full bg-accent z-0"
+          aria-hidden="true"
+        />
+
+        {/* Edificio recortado en diagonal (sin borde ni caja cuadrada) */}
+        <div className="absolute inset-0 z-10 [clip-path:polygon(0%_58%,76%_18%,100%_36%,100%_100%,0%_100%)]">
           <img
-            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
             alt="Arquitectura brutalista"
-            className="w-full h-full object-cover grayscale contrast-125 hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover grayscale contrast-125"
           />
         </div>
       </div>
 
-      {/* SUB-COLUMNA DERECHA: Foto tech alta arriba (2/3) + Montañas abajo (1/3) */}
-      <div className="flex flex-col gap-3 h-full">
+      {/* SUB-COLUMNA DERECHA (5 rebanadas): Foto tech arriba + Montañas abajo */}
+      <div className="col-span-5 flex flex-col gap-3 h-full">
         {/* Foto superior: Hardware / Tech */}
-        <div className="flex-2 rounded-xl overflow-hidden border border-ink/20 bg-ink">
+        <div className="flex-[2] rounded-xl overflow-hidden border border-ink/20 bg-ink">
           <img
             src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
             alt="Hardware y tecnología"
