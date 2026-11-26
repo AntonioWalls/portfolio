@@ -1,5 +1,6 @@
 import { Hero } from "./components/hero/hero";
 import { Navbar } from "./components/navbar/Navbar";
+import { Projects } from "./components/projects/Projects";
 import { Stack } from "./components/stack/Stack";
 
 export function App() {
@@ -10,6 +11,7 @@ export function App() {
       <main className="max-w-[1680px] mx-auto px-4 sm:px-10">
         <Hero />
         <Stack />
+        <Projects />
       </main>
     </div>
   );
