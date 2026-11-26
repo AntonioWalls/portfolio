@@ -1,6 +1,6 @@
 export type TerminalTab = "inicio" | "info" | "stats";
 
-export interface TerminalSystemItem {
+export interface TerminalSystemRow {
   label: string;
   value: string;
   isOnline?: boolean;

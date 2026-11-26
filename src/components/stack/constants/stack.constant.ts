@@ -4,49 +4,13 @@ import { IoLogoAndroid } from "react-icons/io";
 import { SiDocker, SiNestjs, SiTypescript } from "react-icons/si";
 import type { StackItem } from "../interfaces/stack.interface";
 
-// Combinamos varias colecciones de react-icons (fa6, bi, io, si)
-// para que los 7 logos tengan el mismo peso visual sólido (filled) de la referencia.
+// Metadatos no traducibles del stack; los subtítulos traducidos viven en src/i18n/
 export const STACK_ITEMS: StackItem[] = [
-  {
-    id: "angular",
-    name: "Angular",
-    role: "Frontend web",
-    icon: FaAngular,
-  },
-  {
-    id: "nestjs",
-    name: "NestJS",
-    role: "Backend • API",
-    icon: SiNestjs,
-  },
-  {
-    id: "typescript",
-    name: "TypeScript",
-    role: "Tipado • Escalabilidad",
-    icon: SiTypescript,
-  },
-  {
-    id: "postgresql",
-    name: "PostgreSQL",
-    role: "Datos • Persistencia",
-    icon: BiLogoPostgresql,
-  },
-  {
-    id: "android",
-    name: "Android",
-    role: "Apps móviles",
-    icon: IoLogoAndroid,
-  },
-  {
-    id: "docker",
-    name: "Docker",
-    role: "Dev • Deploy",
-    icon: SiDocker,
-  },
-  {
-    id: "aws",
-    name: "AWS",
-    role: "Infraestructura",
-    icon: FaCloud,
-  },
+  { id: "angular", name: "Angular", icon: FaAngular },
+  { id: "nestjs", name: "NestJS", icon: SiNestjs },
+  { id: "typescript", name: "TypeScript", icon: SiTypescript },
+  { id: "postgresql", name: "PostgreSQL", icon: BiLogoPostgresql },
+  { id: "android", name: "Android", icon: IoLogoAndroid },
+  { id: "docker", name: "Docker", icon: SiDocker },
+  { id: "aws", name: "AWS", icon: FaCloud },
 ];

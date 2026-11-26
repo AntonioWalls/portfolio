@@ -1,5 +1,6 @@
+import type { NavItemId } from "../../../i18n/types";
+
 export interface NavItem {
-  id: string;
-  label: string;
+  id: NavItemId;
   href: string;
 }

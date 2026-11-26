@@ -1,9 +1,9 @@
 import type { IconType } from "react-icons";
+import type { StackItemId } from "../../../i18n/types";
 
 export interface StackItem {
-  id: string;
+  id: StackItemId;
   name: string;
-  role: string;
   // IconType acepta cualquier ícono que venga de react-icons (Simple Icons, Font Awesome, etc.)
   icon: IconType;
 }

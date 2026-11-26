@@ -1,13 +1,44 @@
 @import "tailwindcss";
 
-@theme {
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Paleta semántica: modo claro por defecto */
+:root {
+  --surface-cream: #F4F3EF;        /* Fondo principal claro */
+  --surface-card: #F4F3EF;         /* Superficie de tarjetas claras */
+  --surface-ink: #141413;          /* Negro carbón para textos y bordes */
+  --surface-terminal: #181817;     /* Negro de las consolas */
+  --surface-terminal-text: #F4F3EF; /* Texto claro dentro de consolas y footer */
+  --surface-accent: #FFD000;       /* Amarillo vibrante */
+  --surface-border-muted: #D5D3CA; /* Gris suave para líneas divisorias */
+}
+
+/* Modo oscuro: invierte fondo y texto principal, manteniendo las consolas en negro profundo */
+.dark {
+  --surface-cream: #121211;
+  --surface-card: #1A1A18;
+  --surface-ink: #F4F3EF;
+  --surface-terminal: #0B0B0A;
+  --surface-terminal-text: #F4F3EF;
+  --surface-accent: #FFD000;
+  --surface-border-muted: #2B2B28;
+}
+
+@theme inline {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 
-  --color-cream: #F4F3EF;        
-  --color-ink: #141413;          /* Negro carbón para textos y bordes */
-  --color-terminal: #181817;     /* Negro de las consolas */
-  --color-accent: #FFD000;       /* Amarillo vibrante */
-  --color-border-muted: #D5D3CA; /* Gris suave para líneas divisorias */
+  --color-cream: var(--surface-cream);
+  --color-card: var(--surface-card);
+  --color-ink: var(--surface-ink);
+  --color-terminal: var(--surface-terminal);
+  --color-terminal-text: var(--surface-terminal-text);
+  --color-accent: var(--surface-accent);
+  --color-border-muted: var(--surface-border-muted);
+}
+
+/* Scroll suave al navegar entre secciones con los enlaces #id */
+html {
+  scroll-behavior: smooth;
 }

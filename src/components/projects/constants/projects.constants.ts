@@ -1,25 +1,21 @@
 import type {
-  ProjectFilter,
+  ProjectFilterId,
   ProjectItem,
 } from "../interfaces/projects.interface";
 
-export const PROJECT_FILTERS: ProjectFilter[] = [
-  { id: "todos", label: "ver todos" },
-  { id: "web", label: "por web" },
-  { id: "mobile", label: "por mobile" },
-  { id: "cloud", label: "por cloud" },
+// Los textos de filtros y proyectos viven en src/i18n/
+export const PROJECT_FILTER_IDS: ProjectFilterId[] = [
+  "todos",
+  "web",
+  "mobile",
+  "cloud",
 ];
 
 export const PROJECTS: ProjectItem[] = [
   {
     id: "portal-onboarding",
-    title: "Portal de Onboarding",
-    path: "~/proyectos/portal-onboarding",
-    description:
-      "Plataforma web para la gestión del ciclo de incorporación de nuevos colaboradores.",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-    tags: ["web", "fullstack"],
     categories: ["web"],
     stack: ["Angular", "NestJS", "PostgreSQL", "Docker"],
     url: "#",
@@ -27,13 +23,8 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     id: "focaldrop",
-    title: "FocalDrop",
-    path: "~/proyectos/focaldrop",
-    description:
-      "App móvil para capturar, organizar y compartir ideas, notas y referencias de forma rápida.",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    tags: ["mobile", "cloud"],
     categories: ["mobile", "cloud"],
     stack: ["Android", "TypeScript", "AWS"],
     url: "#",
