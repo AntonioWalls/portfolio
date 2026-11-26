@@ -48,6 +48,8 @@ export interface TranslationSchema {
     description: string;
     ctaProjects: string;
     ctaDownloadCv: string;
+    cvUrl: string;
+    cvFileName: string;
     visualAlts: {
       architecture: string;
       hardware: string;

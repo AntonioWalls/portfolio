@@ -29,6 +29,8 @@ export const en: TranslationSchema = {
       "I build applications that solve real problems, focused on product, performance, and user experience.",
     ctaProjects: "View projects",
     ctaDownloadCv: "Download CV",
+    cvUrl: "/cv-en.pdf",
+    cvFileName: "CV-Fabian-Paredes-EN.pdf",
     visualAlts: {
       architecture: "Brutalist architecture",
       hardware: "Hardware and technology",

@@ -45,8 +45,8 @@ export function Hero() {
             </a>
 
             <a
-              href="/cv-fabian.pdf"
-              download
+              href={t.hero.cvUrl}
+              download={t.hero.cvFileName}
               className="border border-ink/40 text-ink font-mono text-sm px-5 py-3 rounded-lg flex items-center gap-2 hover:bg-ink/5 transition"
             >
               <Download className="w-4 h-4" />
