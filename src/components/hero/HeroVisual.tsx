@@ -33,7 +33,7 @@ export function HeroVisual() {
       {/* SUB-COLUMNA DERECHA (5 rebanadas): Foto tech arriba + Montañas abajo */}
       <div className="col-span-5 flex flex-col gap-3 h-full">
         {/* Foto superior: Hardware / Tech */}
-        <div className="flex-[2] rounded-xl overflow-hidden border border-ink/20 bg-ink">
+        <div className="flex-2 rounded-xl overflow-hidden border border-ink/20 bg-ink">
           <img
             src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
             alt="Hardware y tecnología"
