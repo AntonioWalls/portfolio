@@ -132,5 +132,27 @@ export interface TranslationSchema {
     path: string;
     signature: string;
     status: string;
+    openContactAria: string;
+  };
+  contact: {
+    path: string;
+    title: string;
+    subtitle: string;
+    closeAria: string;
+    directChannelsLabel: string;
+    copyEmail: string;
+    copiedEmail: string;
+    formCommand: string;
+    nameLabel: string;
+    namePlaceholder: string;
+    emailLabel: string;
+    emailPlaceholder: string;
+    messageLabel: string;
+    messagePlaceholder: string;
+    submitButton: string;
+    sendingButton: string;
+    successMessage: string;
+    fallbackMessage: string;
+    errorMessage: string;
   };
 }

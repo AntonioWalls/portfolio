@@ -162,5 +162,30 @@ export const es: TranslationSchema = {
     path: "~/fabian.dev",
     signature: "Fabián • Fullstack & Mobile",
     status: "listo.",
+    openContactAria: "Abrir ventana de contacto",
+  },
+  contact: {
+    path: "~/fabian.dev/contact",
+    title: "Hablemos",
+    subtitle:
+      "Disponible para oportunidades Fullstack, Mobile o colaboraciones.",
+    closeAria: "Cerrar ventana de contacto",
+    directChannelsLabel: "// CANALES DIRECTOS",
+    copyEmail: "Copiar correo",
+    copiedEmail: "¡Copiado!",
+    formCommand: "send-message --to fabian",
+    nameLabel: "nombre",
+    namePlaceholder: "Tu nombre o empresa",
+    emailLabel: "correo",
+    emailPlaceholder: "reclutador@empresa.com",
+    messageLabel: "mensaje",
+    messagePlaceholder: "Cuéntame sobre la vacante o proyecto...",
+    submitButton: "Enviar mensaje",
+    sendingButton: "Enviando...",
+    successMessage: "Mensaje enviado correctamente. Te responderé pronto.",
+    fallbackMessage:
+      "Abriendo tu cliente de correo con el mensaje prellenado...",
+    errorMessage:
+      "Ocurrió un error al enviar. Puedes copiar mi correo o escribirme por LinkedIn.",
   },
 };

@@ -5,7 +5,11 @@ import { useTheme } from "../../context/theme.context";
 import type { NavItemId } from "../../i18n/types";
 import { NAV_ITEMS } from "./constants/nav.constant";
 
-export function Navbar() {
+interface NavbarProps {
+  onOpenContact: () => void;
+}
+
+export function Navbar({ onOpenContact }: NavbarProps) {
   const [activeTab, setActiveTab] = useState<NavItemId>("inicio");
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const { theme, toggleTheme } = useTheme();
@@ -79,14 +83,18 @@ export function Navbar() {
             )}
           </button>
 
-          {/* Botón Contacto */}
-          <a
-            href="#contacto"
-            className="bg-ink text-cream font-mono text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-md flex items-center gap-1.5 sm:gap-2 hover:opacity-85 transition-opacity whitespace-nowrap shrink-0"
+          {/* Botón Contacto (abre el modal estilo terminal) */}
+          <button
+            type="button"
+            onClick={() => {
+              setIsMenuOpen(false);
+              onOpenContact();
+            }}
+            className="bg-ink text-cream font-mono text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-md flex items-center gap-1.5 sm:gap-2 hover:opacity-85 transition-opacity whitespace-nowrap shrink-0 cursor-pointer"
           >
             <span>{t.nav.contact}</span>
             <ArrowUpRight className="w-4 h-4" />
-          </a>
+          </button>
 
           {/* Cuadrícula decorativa 3x3 (solo en escritorio) */}
           <div className="hidden xl:grid grid-cols-3 gap-1.5 p-1">
